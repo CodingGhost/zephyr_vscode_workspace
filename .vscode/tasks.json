@@ -25,6 +25,21 @@
 			"problemMatcher": [ "$gcc" ]
 		},
 		{
+			"label": "West Flash App",
+			"type": "process",
+			"group": "build",
+			"command": "${config:west}",
+			"args": [
+				"flash",
+				"-d",
+				"${config:app.build_dir}"
+			],
+			"dependsOn": [
+				// "Clean Build",
+			 ],
+			"problemMatcher": [ "$gcc" ]
+		},
+		{
 			"label": "West Build Bootloader",
 			"type": "process",
 			"group": "build",
